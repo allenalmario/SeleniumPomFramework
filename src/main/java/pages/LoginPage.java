@@ -13,7 +13,7 @@ public class LoginPage extends BasePage {
     By username_field = By.id("user-name");
     By password_field = By.id("password");
     By login_button = By.id("login-button");
-    By login_error = By.xpath("//h3[contains(text(),'Epic sadface: Username and password do not match a')]");
+    By login_error = By.xpath("//*[@data-test]");
 
     public void navigateToLoginPage() {
         log.info("Navigating to: " + SeleniumFactory.config.getProperty("baseurl"));

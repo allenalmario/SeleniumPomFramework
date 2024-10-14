@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,7 +11,7 @@ import pages.ProductsPage;
 import utils.SeleniumFactory;
 
 @Slf4j
-public class LoginStepDefinitions {
+public class LoginPageStepDefinitions {
 
     LoginPage loginPage = new LoginPage();
     ProductsPage productsPage = new ProductsPage();
@@ -19,13 +20,13 @@ public class LoginStepDefinitions {
     public void user_navigates_to_login_screen() {
         loginPage.navigateToLoginPage();
     }
-    @When("user enters valid username")
-    public void user_enters_valid_username() {
-        loginPage.fillUsernameField(SeleniumFactory.config.getProperty("username"));
+    @When("user enters {string} as username")
+    public void userEntersAsUsername(String username) throws Throwable {
+        loginPage.fillUsernameField(username);
     }
-    @When("user enters valid password")
-    public void user_enters_valid_password() {
-        loginPage.fillInPasswordField(SeleniumFactory.config.getProperty("password"));
+    @And("user enters {string} as password")
+    public void userEntersAsPassword(String password) throws Throwable {
+        loginPage.fillInPasswordField(password);
     }
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
@@ -36,15 +37,8 @@ public class LoginStepDefinitions {
         Assert.assertTrue(productsPage.assertOnProductsPage());
     }
     @When("user enters a invalid username as {string}")
-    public void user_enters_a_invalid_username_as(String invalid_username) {
-        loginPage.fillUsernameField(invalid_username);
-    }
-    @When("user enters a invalid password as {string}")
-    public void user_enters_a_invalid_password_as(String invalid_password) {
-        loginPage.fillInPasswordField(invalid_password);
-    }
-    @Then("user should should see an error message on the login screen")
-    public void user_should_should_see_an_error_message_on_the_login_screen() {
+    @Then("user should see an error message on the login screen")
+    public void user_should_see_an_error_message_on_the_login_screen() {
         loginPage.assertLoginError();
     }
     @When("user clicks on hamburger menu")
