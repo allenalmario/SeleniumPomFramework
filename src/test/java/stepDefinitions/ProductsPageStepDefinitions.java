@@ -12,5 +12,8 @@ public class ProductsPageStepDefinitions {
         if (item.equals("Sauce Labs Backpack")) {
             productsPage.clickOnSauceLabsBackpack();
         }
+        else if (item.equals("Sauce Labs Bolt T-Shirt")) {
+            productsPage.clickOnSauceLabsBoltTshirtLink();
+        }
     }
 }

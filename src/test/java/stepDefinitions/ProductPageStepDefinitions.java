@@ -16,4 +16,9 @@ public class ProductPageStepDefinitions {
     public void user_clicks_on_cart_link() {
         productPage.clickOnCartLink();
     }
+
+    @And("user clicks on Back to products button")
+    public void user_clicks_on_back_to_products_link() {
+        productPage.clickOnBackToProductsLink();
+    }
 }
