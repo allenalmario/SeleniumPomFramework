@@ -1,6 +1,8 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import org.testng.Assert;
 import pages.InformationPage;
 
 public class InformationPageStepDefinitions {
@@ -25,5 +27,18 @@ public class InformationPageStepDefinitions {
     @And("user clicks Continue button")
     public void user_clicks_on_continue_button() {
         informationPage.clickOnContinueButton();
+    }
+
+    @Then("user should see {string} error message")
+    public void userShouldSeeErrorMessage(String errorMessage) {
+        if (errorMessage.contains("First Name")) {
+            Assert.assertEquals(informationPage.extractErrorMessage("First Name"), errorMessage);
+        } else if (errorMessage.contains("Last Name")) {
+            Assert.assertEquals(informationPage.extractErrorMessage("Last Name"), errorMessage);
+
+        } else if (errorMessage.contains("Postal Code")) {
+            Assert.assertEquals(informationPage.extractErrorMessage("Postal Code"), errorMessage);
+
+        }
     }
 }
