@@ -28,10 +28,10 @@ public class YourCartPage extends BasePage {
             // Extract and print the information from the div
             String labelText = labelDiv.getText(); // Get the text inside the div
             if (labelText.equals(itemName)) {
-                break;
+                return true;
             }
         }
-            return true;
+            return false;
     }
 
     public void clickOnCheckOutButton() {

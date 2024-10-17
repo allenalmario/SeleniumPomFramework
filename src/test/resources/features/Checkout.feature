@@ -82,3 +82,43 @@ Feature: Checkout
     And user fills out Last Name field
     And user clicks Continue button
     Then user should see "Error: Postal Code is required" error message
+
+  Scenario: User can add an item to the cart from products page and remove it from cart
+    Given user navigates to login screen
+    And user enters "standard_user" as username
+    And user enters "secret_sauce" as password
+    And user clicks on login button
+    And user clicks on "Sauce Labs Onesie" Add to cart button
+    And user clicks on "Sauce Labs Onesie" Remove button
+    Then the "Sauce Labs Onesie" Add to Cart button should be visible
+
+  Scenario: User can add an item to the cart from products page and go to cart and remove it from cart
+    Given user navigates to login screen
+    And user enters "standard_user" as username
+    And user enters "secret_sauce" as password
+    And user clicks on login button
+    And user clicks on "Sauce Labs Fleece Jacket" Add to cart button
+    And user clicks on Cart link
+    And user clicks on "Sauce Labs Fleece Jacket" Remove button
+    Then the "Sauce Labs Fleece Jacket" should not be in the cart
+
+  Scenario: User can add an item to the cart from product page and remove it from cart
+    Given user navigates to login screen
+    And user enters "standard_user" as username
+    And user enters "secret_sauce" as password
+    And user clicks on login button
+    And user clicks on "Sauce Labs Bike Light" item
+    And user clicks on Add to Cart button
+    And user clicks on "Sauce Labs Bike Light" Remove button
+    Then the "Sauce Labs Bike Light" Add to Cart button should be visible
+
+  Scenario: User can add an item from product page and go to cart and remove it from cart
+    Given user navigates to login screen
+    And user enters "standard_user" as username
+    And user enters "secret_sauce" as password
+    And user clicks on login button
+    And user clicks on "Test.allTheThings() T-Shirt (Red)" item
+    And user clicks on Add to Cart button
+    And user clicks on Cart link
+    And user clicks on "Test.allTheThings() T-Shirt (Red)" Remove button
+    Then the "Test.allTheThings() T-Shirt (Red)" should not be in the cart

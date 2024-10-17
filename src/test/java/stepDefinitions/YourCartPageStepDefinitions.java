@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.testng.Assert;
 import pages.YourCartPage;
 
@@ -13,13 +14,13 @@ public class YourCartPageStepDefinitions {
         Assert.assertTrue(yourCartPage.isItemPresentInCart(itemName));
     }
 
-//    @And("user ensures the item quantity is correct")
-//    public void userEnsuresTheItemQuantityIsCorrect() {
-//        Assert.assertEquals(Integer.parseInt(yourCartPage.extractCartItemQuantity()), 1);
-//    }
-
     @And("user clicks on Checkout button")
     public void userClicksOnCheckoutButton() {
         yourCartPage.clickOnCheckOutButton();
+    }
+
+    @Then("the {string} should not be in the cart")
+    public void theShouldNotBeInTheCart(String item) {
+        Assert.assertFalse(yourCartPage.isItemPresentInCart(item));
     }
 }

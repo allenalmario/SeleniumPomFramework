@@ -15,6 +15,17 @@ public class BasePage {
     By hamburger_menu = By.id("react-burger-menu-btn");
     By logout_link = By.xpath("//a[@id='logout_sidebar_link']");
     By cart_link = By.xpath("//a[@class='shopping_cart_link']");
+    public static By sauce_labs_backpack_link = By.id("item_4_title_link");
+    public static By sauce_labs_bolt_tshirt_link = By.id("item_1_title_link");
+    public static By sauce_labs_bike_light_link = By.id("item_0_title_link");
+    public static By sauce_labs_tshirt_red_link = By.id("item_3_title_link");
+    public static By sauce_labs_onesie_add_to_cart_button = By.id("add-to-cart-sauce-labs-onesie");
+    public static By sauce_labs_fleece_jacket_add_to_cart_button = By.id("add-to-cart-sauce-labs-fleece-jacket");
+    public static By sauce_labs_onesie_remove_button = By.id("remove-sauce-labs-onesie");
+    public static By sauce_labs_fleece_jacket_remove_button = By.id("remove-sauce-labs-fleece-jacket");
+    public static By sauce_labs_tshirt_red_remove_button = By.id("remove-test.allthethings()-t-shirt-(red)");
+    public static By product_page_remove_button = By.id("remove");
+    public static By product_page_add_to_cart_button = By.id("add-to-cart");
 
     public static WebDriver driver;
 
