@@ -34,6 +34,6 @@ mvn clean test
 
 ### Locally
 After tests are executed, an Extent Report with test results should be saved in the directory
-./target/cucumber-reports/extent.html
+./target/extent-reports/extent.html
 
 *This project was built with the guidance of the Udemy course "Master Microsoft Playwright with Core Java". [CLICK HERE](https://www.udemy.com/course/playwright-java-tutorial/) to check out the course.*
