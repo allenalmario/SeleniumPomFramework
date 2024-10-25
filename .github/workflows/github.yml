@@ -32,6 +32,7 @@ jobs:
 
   deploy:
     steps:
+      - runs-on: windows-latest
       - name: Rename Extent report to index.html
         run: mv target/extent-reports/extent.html target/extent-reports/index.html
       - name: Archive Extent report Index HTML
