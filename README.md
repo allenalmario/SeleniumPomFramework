@@ -31,6 +31,7 @@ mvn clean test
 
 ### GitHub Page
 
+[Extent Report](https://allenalmario.github.io/SeleniumPomFramework/)
 
 ### Locally
 After tests are executed, an Extent Report with test results should be saved in the directory
