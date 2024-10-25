@@ -15,7 +15,7 @@ for an easy "push of a button" mechanism to run the automated tests and publish 
 
 ### GitHub Actions
 - Go to Actions
-- Click on the ""
+- Click on "Selenium with Cucumber BDD and TestNG Test Automation Run"
 - Select Run workflow
 - Ensure branch is set to "main"
 - Click Run workflow
