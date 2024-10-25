@@ -27,10 +27,16 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-          
+
       - name: Build with Maven
         # The run keyword tells the job to execute a command on the runner
         run: mvn clean test
+
+      - name: Archive Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: target/extent-reports/
 
   deploy:
     runs-on: windows-latest
