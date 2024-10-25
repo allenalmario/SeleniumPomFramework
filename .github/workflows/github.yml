@@ -32,6 +32,9 @@ jobs:
         # The run keyword tells the job to execute a command on the runner
         run: mvn clean test
 
+      - name: List Reports Directory
+        run: dir target/extent-reports/
+
       - name: Archive Test Results
         uses: actions/upload-artifact@v3
         with:
