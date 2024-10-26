@@ -20,27 +20,32 @@ public class LoginPageStepDefinitions {
     public void user_navigates_to_login_screen() {
         loginPage.navigateToLoginPage();
     }
+
     @When("user enters {string} as username")
-    public void userEntersAsUsername(String username) throws Throwable {
+    public void userEntersAsUsername(String username) {
         loginPage.fillUsernameField(username);
     }
+
     @And("user enters {string} as password")
-    public void userEntersAsPassword(String password) throws Throwable {
+    public void userEntersAsPassword(String password) {
         loginPage.fillInPasswordField(password);
     }
+
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
         loginPage.clickOnLoginButton();
     }
+
     @Then("user should be on the home page")
     public void user_should_be_on_the_home_page() {
         Assert.assertTrue(productsPage.assertOnProductsPage());
     }
-    @When("user enters a invalid username as {string}")
+
     @Then("user should see an error message on the login screen")
     public void user_should_see_an_error_message_on_the_login_screen() {
-        loginPage.assertLoginError();
+        Assert.assertTrue(loginPage.assertLoginError());
     }
+
     @When("user clicks on hamburger menu")
     public void user_clicks_on_hamburger_menu() {
         productsPage.clickOnHamburgerMenu();

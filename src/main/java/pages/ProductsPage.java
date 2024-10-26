@@ -73,4 +73,5 @@ public class ProductsPage extends BasePage {
                 return false;
         }
     }
+
 }

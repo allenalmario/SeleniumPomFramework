@@ -17,12 +17,15 @@ public class ProductsPageStepDefinitions {
     public void userClicksOnAddToCartButton(String item) {
         productsPage.clickOnAddToCartButton(item);
     }
+
     @And ("user clicks on {string} Remove button")
     public void userClicksOnRemoveButton(String item) {
         productsPage.clickOnRemoveButton(item);
     }
+
     @Then("the {string} Add to Cart button should be visible")
     public void theAddToCartButtonShouldBeVisible(String item) {
         productsPage.addToCartElementIsVisible(item);
     }
+
 }

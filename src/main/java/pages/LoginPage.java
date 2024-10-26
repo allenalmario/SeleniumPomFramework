@@ -44,4 +44,5 @@ public class LoginPage extends BasePage {
         log.info("Asserting on Login page");
         return returnPageUrl();
     }
+
 }

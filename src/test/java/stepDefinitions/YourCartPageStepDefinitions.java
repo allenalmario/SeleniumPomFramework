@@ -23,4 +23,5 @@ public class YourCartPageStepDefinitions {
     public void theShouldNotBeInTheCart(String item) {
         Assert.assertFalse(yourCartPage.isItemPresentInCart(item));
     }
+
 }

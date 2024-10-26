@@ -12,4 +12,5 @@ public class CompletePageStepDefinitions {
     public void user_should_see_a_message(String thankYouMessage) {
         Assert.assertEquals(completePage.extractOrderConfirmationText(), thankYouMessage);
     }
+
 }

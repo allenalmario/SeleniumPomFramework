@@ -21,4 +21,5 @@ public class ProductPageStepDefinitions {
     public void user_clicks_on_back_to_products_link() {
         productPage.clickOnBackToProductsLink();
     }
+
 }

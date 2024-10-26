@@ -11,4 +11,5 @@ public class OverviewPageStepDefinitions {
     public void user_clicks_on_finish_button() {
         overviewPage.clickFinishButton();
     }
+
 }
